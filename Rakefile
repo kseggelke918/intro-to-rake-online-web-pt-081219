@@ -10,11 +10,11 @@ task :hola do
 end 
 end 
 
-task :enviroment do 
-  require_relative './config/enviroment'
-end 
-
 namespace :db do 
+  desc 'add enviroment file'
+  task :enviroment do 
+    require_relative './config/enviroment'
+  end 
   desc 'migrate changes to your database'
   task :migrate => :enviroment do 
     Student.create_table
