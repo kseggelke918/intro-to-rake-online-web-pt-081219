@@ -10,6 +10,10 @@ task :hola do
 end 
 end 
 
+task :enviroment do 
+  require_relative './config/enviroment'
+end 
+
 namespace :db do 
   desc 'migrate changes to your database'
   task :migrate => :enviroment do 
