@@ -11,12 +11,13 @@ end
 end 
 
 namespace :db do 
-  desc 'add enviroment file'
-  task :enviroment do 
-    require_relative './config/enviroment'
-  end 
   desc 'migrate changes to your database'
-  task :migrate => :enviroment do 
+  task :migrate => :environment do 
     Student.create_table
   end 
 end 
+
+  desc 'connection to enviroment.rb'
+  task :environment do 
+    require_relative './config/enviroment'
+  end 
