@@ -19,5 +19,5 @@ end
 
   desc 'connection to enviroment.rb'
   task :environment do 
-    require_relative './config/enviroment'
+    require_relative './config/environment'
   end 
